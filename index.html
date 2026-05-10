@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación Día de la Madre · Estilo Clásico con Bordes para Imagen y Música</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #e9e0d9;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Georgia', 'Times New Roman', 'Palatino', serif;
+            padding: 2rem;
+        }
+
+        /* Tarjeta estilo invitación clásica (como la referencia) */
+        .invitation-card {
+            max-width: 680px;
+            width: 100%;
+            background: #fffef7;
+            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.15);
+            padding: 2rem 2.5rem 1.8rem 2.5rem;
+            border-radius: 4px;
+            border: 1px solid #f0e2d8;
+        }
+
+        /* Línea decorativa */
+        .deco-line {
+            width: 80px;
+            height: 1px;
+            background: #c9b6a8;
+            margin: 0.6rem auto;
+        }
+
+        .main-line {
+            width: 100px;
+            height: 1.5px;
+            background: #b88d74;
+            margin: 1rem auto;
+        }
+
+        /* ============================================== */
+        /* BORDE SUPERIOR PARA IMAGEN (como la referencia) */
+        /* ============================================== */
+        .image-border-top {
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .image-border-top img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        .top-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        /* ============================================== */
+        /* BORDE INFERIOR PARA IMAGEN */
+        /* ============================================== */
+        .image-border-bottom {
+            margin-top: 1.5rem;
+            text-align: center;
+            border-top: 1px solid #eedbcb;
+            padding-top: 1.2rem;
+        }
+        
+        .image-border-bottom img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        
+        .bottom-image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        
+        .image-caption {
+            font-size: 0.65rem;
+            color: #c9a48b;
+            text-align: center;
+            margin-top: 0.4rem;
+            letter-spacing: 1px;
+        }
+
+        /* Texto "TE INVITAMOS CORDIALMENTE" */
+        .edit-line {
+            font-size: 0.85rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #8e6b55;
+            text-align: center;
+            margin: 0.5rem 0 0.8rem;
+            font-weight: normal;
+            word-spacing: 2px;
+        }
+
+        /* Frase principal */
+        .invitacion-frase {
+            font-size: 1.9rem;
+            text-align: center;
+            font-family: 'Georgia', serif;
+            color: #5c3e2c;
+            font-weight: normal;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 0.7rem 0;
+            line-height: 1.35;
+        }
+
+        /* Día principal */
+        .dia-evento {
+            font-size: 2.5rem;
+            text-align: center;
+            font-family: 'Georgia', serif;
+            color: #3f2a1d;
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin: 0.5rem 0 0.2rem;
+        }
+
+        /* Hora y domingo */
+        .hora-domingo {
+            font-size: 1rem;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #7a5a48;
+            margin-top: 0.3rem;
+        }
+
+        /* Lugar */
+        .label-lugar {
+            text-align: center;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            color: #8e6b55;
+            margin-top: 1.4rem;
+            text-transform: uppercase;
+        }
+
+        .direccion {
+            text-align: center;
+            font-size: 1.15rem;
+            color: #5c3e2c;
+            margin: 0.4rem 0 0.2rem;
+            font-weight: 500;
+        }
+
+        /* Regalos y sorpresas */
+        .regalos-line {
+            text-align: center;
+            font-size: 1rem;
+            color: #a07058;
+            letter-spacing: 1px;
+            margin: 0.8rem 0 0.3rem;
+        }
+
+        /* Comité y patrocinadores */
+        .comite-block {
+            text-align: center;
+            margin-top: 1.2rem;
+            border-top: 1px solid #eedbcb;
+            padding-top: 1rem;
+        }
+        .comite-title {
+            font-size: 0.8rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #9b7862;
+            font-weight: normal;
+        }
+        .patrocinadores-title {
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #b6917a;
+            margin-top: 0.4rem;
+        }
+
+        /* Detalle floral sutil */
+        .floral-icon {
+            text-align: center;
+            font-size: 0.9rem;
+            color: #dbb094;
+            margin: 0.2rem 0;
+            letter-spacing: 5px;
+        }
+
+        /* ============================================== */
+        /* REPRODUCTOR DE MÚSICA (ESTILO CLÁSICO Y ELEGANTE) */
+        /* ============================================== */
+        .music-player {
+            text-align: center;
+            margin: 1.2rem 0 0.5rem;
+            padding: 0.5rem 0;
+        }
+        
+        .music-player audio {
+            width: 100%;
+            max-width: 320px;
+            border-radius: 30px;
+            background: #f5ede7;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .music-label {
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #b88d74;
+            margin-bottom: 0.4rem;
+            font-style: italic;
+        }
+        
+        audio::-webkit-media-controls-panel {
+            background-color: #f5ede7;
+        }
+        
+        audio::-webkit-media-controls-play-button {
+            background-color: #dbb094;
+            border-radius: 50%;
+        }
+
+        /* Responsive */
+        @media (max-width: 550px) {
+            .invitation-card {
+                padding: 1.5rem;
+            }
+            .invitacion-frase {
+                font-size: 1.4rem;
+            }
+            .dia-evento {
+                font-size: 2rem;
+            }
+            .music-player audio {
+                max-width: 260px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="invitation-card">
+    
+    <!-- ===== BORDE SUPERIOR PARA IMAGEN ===== -->
+    <div class="image-border-top">
+        <div class="top-image-container">
+            <img src="img/flores3.png" 
+                 alt="Adorno floral superior"
+                 onerror="this.onerror=null; this.src='https://cdn.pixabay.com/photo/2012/04/13/20/08/flourish-33222_1280.png';"
+                 style="width: auto; max-width: 280px; height: auto;">
+        </div>
+    </div>
+    
+    <!-- Línea decorativa -->
+    <div class="deco-line"></div>
+    
+    <!-- Texto "TE INVITAMOS CORDIALMENTE" -->
+    <div class="edit-line">TE INVITAMOS CORDIALMENTE</div>
+    
+    <!-- Frase principal -->
+    <div class="invitacion-frase">
+        VEN A CELEBRAR<br>
+        EL DÍA DE LAS MADRES
+    </div>
+    
+    <div class="deco-line"></div>
+    
+    <!-- Día -->
+    <div class="dia-evento">
+        17 DE MAYO
+    </div>
+    
+    <!-- Hora y día de la semana -->
+    <div class="hora-domingo">
+        5:00 PM &nbsp; &nbsp; DOMINGO
+    </div>
+    
+    <!-- Lugar -->
+    <div class="label-lugar">
+        LUGAR DE ENCUENTRO
+    </div>
+    
+    <div class="direccion">
+        Kiosko, Fraccionamiento Montebello
+    </div>
+    
+    <!-- Línea intermedia -->
+    <div class="main-line"></div>
+    
+    <!-- TE ESPERAMOS -->
+    <div class="invitacion-frase" style="font-size: 1.5rem; letter-spacing: 3px; margin: 0.2rem 0;">
+        TE ESPERAMOS
+    </div>
+    
+    <!-- Regalos y sorpresas -->
+    <div class="regalos-line">
+        🎁 Abran regalos y entre otras más sorpresas 🎁
+    </div>
+    
+    <!-- Detalle floral -->
+    <div class="floral-icon">
+        ✿ ✿ ✿
+    </div>
+    
+    <!-- Comité y patrocinadores -->
+    <div class="comite-block">
+        <div class="comite-title">COMITÉ GENERAL</div>
+        <div class="patrocinadores-title">PATROCINADORES</div>
+    </div>
+    
+    <!-- ===== REPRODUCTOR DE MÚSICA (AGREGADO) ===== -->
+    <div class="music-player">
+        <div class="music-label"> Canción para mamá </div>
+        <audio controls loop>
+            <!-- ⬇️ CAMBIA EL ENLACE DE ESTA CANCIÓN POR EL QUE DESEES ⬇️ -->
+            <source src="img/virgi.mp3" type="audio/mpeg">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+        <div style="font-size: 0.6rem; color: #c9a48b; margin-top: 0.3rem;">🎶 Con amor para todas las madres 🎶</div>
+    </div>
+    
+    <!-- ===== BORDE INFERIOR PARA IMAGEN ===== -->
+    <div class="image-border-bottom">
+        <div class="bottom-image-container">
+            <img src="img/flores2.png" 
+                 alt="Detalle floral inferior"
+                 onerror="this.onerror=null; this.src='https://cdn.pixabay.com/photo/2017/08/31/05/36/floral-2699478_1280.png';"
+                 style="width: 100%; max-width: 500px; object-fit: contain;">
+        </div>
+        <div class="image-caption">✧ con mucho cariño ✧</div>
+    </div>
+    
+    <!-- Línea decorativa final -->
+    <div class="deco-line" style="margin-top: 0.8rem;"></div>
+    
+</div>
+</body>
+</html>
